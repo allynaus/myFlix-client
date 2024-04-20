@@ -1,0 +1,55 @@
+# myflix Movie Application
+
+Welcome to myFlix! Enjoy an interactive movie web application where users can explore, login, and save their favorite films. 
+
+## Overview
+
+myFlix is a full-stack web application utilizing MongoDB, Express, Node.js, and React. This application gives users the option to create a profile, login with authentication, add/delete movies from their 'favorites' list, as well as view/interact with a catalog of films.
+
+## Features
+
+- **Secure User Login**: myFlix users can rest assured that their data is safely secured from any malicious security threats. With a bearer token and password hashing set in place, users are able to create, login, and log out of their myFlix profile.
+- **Interactive User Profile**: Once logged into their myFlix account, users can view and update their profile by changing their username, password, email, or date of birth.
+- **Favorite Movies List**: Users have the ability to add favorites or delete them from their saved list of favorite movies.
+- **Movie Catalog**: When logged in, myFlix users can explore a catalog of movies and view their details. Users can also search for movies based on genre and director.
+
+## Technologies Used
+
+- **Frontend**: React
+- **Backend**: Node.js, MongoDB, Express
+- **Authentication**: JWT // JSON Web token
+- **Database**: MongoDB Atlas
+
+## Setup Instructions
+
+1. Clone the repository: 
+
+Install Dependencies:
+    `npm install`
+Start the dev server: 
+    `npm start`
+Open application in your browser: http://localhost:1234
+
+## API Endpoints
+
+**User Endpoints**
+
+GET /users: Get list of all users, requires authentication
+GET /users/:Username: Get information about a user by username, requires authentication
+PUT /users/:Username: Update user information, requires authentication
+DELETE /users/:Username: Delete user account, requires authentication
+
+**Movie Endpoints**
+
+GET /movies: Get a list of all movies, requires authentication
+GET /movies/:Title: Get a movie's details by title, requires authentication
+GET /movies/genres/:genreName: Get a list of movies by genre
+GET /movies/directors/:directorName: Get a list of movies by their director, requires authentication
+
+**Favorite Movie List Endpoints**
+
+POST /users/:Username/movies/:MovieID: Add a movie to myFlix user's favorite list, requires authentication
+DELETE /users/:Username/movies/:MovieID: Remove a movie from myFlix user's favorite list, requires authentication
+
+## Documentation
+
